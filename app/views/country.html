@@ -24,7 +24,7 @@
 				<br><br>
 				<dd id="neighbors-list-dd">
 					<ul id="neighbors-list" ng-repeat="neighbor in neighbors">
-						<li><a ng-href="#/countries/{{ neighbor.countryCode | uppercase }}">{{ neighbor.countryName }}</a></li>
+						<li><a ng-href="/countries/{{ neighbor.countryCode | uppercase }}">{{ neighbor.countryName }}</a></li>
 					</ul>
 				</dd>
 			</dl>
@@ -41,6 +41,6 @@
 		</div>
 	</div>
 	<div class="navigations text-center">
-		<a href='#/' class='btn btn-sm btn-info' role='button'>Home</button>
-		<a href='#/countries' class='btn btn-sm btn-warning' role='button'>Browse Countries</a>
+		<a href='/' class='btn btn-sm btn-info' role='button'>Home</button>
+		<a href='/countries' class='btn btn-sm btn-warning' role='button'>Browse Countries</a>
 	</div>

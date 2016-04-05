@@ -17,6 +17,7 @@ angular.module('App', ['DataServices', 'Data','ngRoute','ngAnimate'])
     .when('/error', {
         template : '<p>Error Page Not Found</p>'
     });
+    $locationProvider.html5Mode(true);
 }])
 .controller('HomeCtrl', ['$scope','countryData', function($scope, countryData) {}])
 .controller('CountriesCtrl', ['$scope','$location','$filter','countryData', '$q', function($scope, $location, $filter, countryData, $q) {

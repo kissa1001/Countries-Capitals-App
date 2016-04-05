@@ -13,7 +13,7 @@
 			</thead>
 			<tbody style="color:#fff;">
 				<tr ng-repeat="country in countries | orderBy:predicate:reverse | filter:search:startsWith" ng-click="showDetail(country)">
-					<td><a class="country-name" ng-href="#/countries/{{country.countryCode}}">{{country.countryName}}</a></td>
+					<td><a class="country-name" ng-href="/countries/{{country.countryCode}}">{{country.countryName}}</a></td>
 					<td>{{country.countryCode}}</td>
 					<td>{{country.capital}}</td>
 					<td>{{(country.areaInSqKm) | number}}</td>
@@ -24,6 +24,6 @@
 		</table>
 	</div>
 	<div class="home text-center">
-		<a href="#/" class="btn btn-sm btn-primary" role='button'>Home</a>
+		<a href="/" class="btn btn-sm btn-primary" role='button'>Home</a>
 	</div>
 </div>

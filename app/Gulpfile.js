@@ -4,7 +4,7 @@ gulp.task('connect', function() {
   connect.server();
 });
 gulp.task('copy-html-files', function() {
-  gulp.src(['./app/**/*.html', './app/owm-cities.json', '!./app/index.html'], {base: './app'})
+  gulp.src(['./app/**/*.html', './app/<package></package>.json', '!./app/index.html'], {base: './app'})
   .pipe(gulp.dest('build/'));
 });
 
