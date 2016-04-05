@@ -1,0 +1,46 @@
+<div class="container" ng-controller="CountryCtrl">
+	<h1 class='text-center'>Countries & Capitals</h1>
+	<hr>
+	<div class="country">
+		<div class="title country-title">{{country.countryName}}</div>
+		<div class="details-box">
+			<dl>
+				<dt>Population of Country: </dt>
+				<dd>{{country.population | number}}</dd>
+
+				<dt>Area (km<sup>2</sup>): </dt>
+				<dd>{{country.areaInSqKm | number}}</dd>
+
+				<dt>Capital: </dt>
+				<dd>{{country.capital}}</dd>
+
+				<dt>Population of Capital : </dt>
+				<dd>{{capitalPopulation | number}}</dd>
+
+				<dt>Continent: </dt>
+				<dd>{{country.continentName}}</dd>
+
+				<dt>{{neighbors.length}} neighbors: </dt>
+				<br><br>
+				<dd id="neighbors-list-dd">
+					<ul id="neighbors-list" ng-repeat="neighbor in neighbors">
+						<li><a ng-href="#/countries/{{ neighbor.countryCode | uppercase }}">{{ neighbor.countryName }}</a></li>
+					</ul>
+				</dd>
+			</dl>
+		</div> 
+	</div> 
+
+	<div id="image-box">
+		<div id="flag-box">
+			<img id="flag-img" ng-src="http://www.geonames.org/flags/x/{{flag}}.gif" />
+		</div>
+
+		<div id="map-box">
+			<img id="map-img" ng-src="http://www.geonames.org/img/country/250/{{map}}.png" />
+		</div>
+	</div>
+	<div class="navigations text-center">
+		<a href='#/' class='btn btn-sm btn-info' role='button'>Home</button>
+		<a href='#/countries' class='btn btn-sm btn-warning' role='button'>Browse Countries</a>
+	</div>
