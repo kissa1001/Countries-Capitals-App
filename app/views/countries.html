@@ -2,7 +2,7 @@
 	<h1 class='text-center'>Countries & Capitals</h1>
 	<hr>
 	<div class="table-responsive">
-		<table class='table table-hover'>
+		<table class='table table-striped table-hover'>
 			<thead style="background:#fff">
 				<th>Name</th>
 				<th>Country Code</th>
@@ -11,7 +11,7 @@
 				<th>Population</th>
 				<th>Continent</th>
 			</thead>
-			<tbody style="color:#fff;">
+			<tbody style="color:#000;">
 				<tr ng-repeat="country in countries | orderBy:predicate:reverse | filter:search:startsWith" ng-click="showDetail(country)">
 					<td><a class="country-name" ng-href="/countries/{{country.countryCode}}">{{country.countryName}}</a></td>
 					<td>{{country.countryCode}}</td>

@@ -10,39 +10,108 @@ background: linear-gradient(to left, #fd746c , #ff9068); /* W3C, IE 10+/ Edge, F
 body h1{
   color:#fff;
 }
+body h2{
+  color:#fff;
+  margin-bottom: 1.5em;
+}
 .country-name{
   color:#6D14FF;
 }
-.table{
-  overflow-y:scroll;
+body table {
+  position: relative;
+  width: 100%;
+  max-height: 450px;
+  overflow: scroll;
+  table-layout: fixed;
+  margin-bottom: -.5em;
 }
-.loading {
-  position:relative;
-  height:100%;
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: #F2F2F2 !important;
 }
-.loading:before {
-  position:absolute;
-  content:"";
-  left:0;
-  bottom:0;
-  right:0;
-  top:0;
-  z-index:1000;
-  background:rgba(255,255,255,0.9) no-repeat center center;
-  background-image: url('loading.gif');
+
+.table-striped > tbody > tr:nth-of-type(even) {
+    background-color: #f9f9f9 !important;
 }
-.animate-view-container { position:relative; min-height: 100%;}
-.animate-view.ng-enter,
-.animate-view.ng-leave {
-    transition:1s linear all;
-    position:absolute;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    background:#eee;
+
+.table-hover > tbody > tr:hover {
+    background-color: #eee !important;
 }
-.animate-view.ng-enter { opacity:0; z-index:100; }
-.animate-view.ng-enter.ng-enter-active { opacity:1; }
-.animate-view.ng-leave { opacity:1; z-index:99; }
-.animate-view.ng-leave.ng-leave-active { opacity:0; }
+#neighbors-list {
+    display: inline-block;
+    color:#A14BFF;
+}
+#flag-img{
+  width:350px;
+  height:200px;
+}
+#map-img{
+  width:350px;
+  height:200px;
+}
+.details-box dt{
+  text-decoration: underline;
+}
+.navigations{
+  margin-top:1em;
+}
+
+/******* Animations ***********/
+
+.fade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    opacity: 1;
+}
+
+.fade.ng-enter,
+.fade.ng-leave {
+    -webkit-transition: all 1.3s ease;
+    transition: all 1.3s ease;
+}
+
+.fade.ng-enter {
+    opacity: 0;
+}
+
+.fade.ng-enter-active {
+    opacity: 1;
+}
+
+.fade.ng-leave {
+    opacity: 1;
+}
+
+.fade.ng-leave-active {
+    opacity: 0;
+}
+
+.animate-enter,
+.animate-leave {
+    -webkit-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -moz-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -ms-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -o-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: nowrap;
+}
+
+.animate-leave.animate-leave-active,
+.animate-enter {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.animate-enter.animate-enter-active,
+.animate-leave {
+    opacity: 1;
+    width: 150px;
+    height: 30px;
+}

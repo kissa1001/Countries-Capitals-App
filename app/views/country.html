@@ -2,45 +2,47 @@
 	<h1 class='text-center'>Countries & Capitals</h1>
 	<hr>
 	<div class="country">
-		<div class="title country-title">{{country.countryName}}</div>
-		<div class="details-box">
-			<dl>
-				<dt>Population of Country: </dt>
-				<dd>{{country.population | number}}</dd>
+		<div class="title country-title text-center"><h2>{{country.countryName}}</h2></div>
+		<div class="row">
+			<div class="details-box col-sm-8 text-center" style='color:#fff;font-size: 1.1em;'>
+				<dl>
+					<dt>Population of Country: </dt>
+					<dd>{{country.population | number}}</dd>
 
-				<dt>Area (km<sup>2</sup>): </dt>
-				<dd>{{country.areaInSqKm | number}}</dd>
+					<dt>Area (km<sup>2</sup>): </dt>
+					<dd>{{country.areaInSqKm | number}}</dd>
 
-				<dt>Capital: </dt>
-				<dd>{{country.capital}}</dd>
+					<dt>Capital: </dt>
+					<dd>{{country.capital}}</dd>
 
-				<dt>Population of Capital : </dt>
-				<dd>{{capitalPopulation | number}}</dd>
+					<dt>Population of Capital : </dt>
+					<dd>{{capitalPopulation | number}}</dd>
 
-				<dt>Continent: </dt>
-				<dd>{{country.continentName}}</dd>
+					<dt>Continent: </dt>
+					<dd>{{country.continentName}}</dd>
 
-				<dt>{{neighbors.length}} neighbors: </dt>
-				<br><br>
-				<dd id="neighbors-list-dd">
-					<ul id="neighbors-list" ng-repeat="neighbor in neighbors">
-						<li><a ng-href="/countries/{{ neighbor.countryCode | uppercase }}">{{ neighbor.countryName }}</a></li>
-					</ul>
-				</dd>
-			</dl>
-		</div> 
+					<dt>{{neighbors.length}} neighbors: </dt>
+					<br><br>
+					<dd id="neighbors-list-dd">
+						<ul id="neighbors-list" ng-repeat="neighbor in neighbors">
+							<li><a ng-href="/countries/{{ neighbor.countryCode | uppercase }}">{{ neighbor.countryName }}</a></li>
+						</ul>
+					</dd>
+				</dl>
+			</div> 
+			<div id="image-box" class="col-sm-4">
+				<div id="flag-box">
+					<img id="flag-img" ng-src="http://www.geonames.org/flags/x/{{flag}}.gif" />
+				</div>
+
+				<div id="map-box">
+					<img id="map-img" ng-src="http://www.geonames.org/img/country/250/{{map}}.png" />
+				</div>
+			</div>
+		</div>
 	</div> 
-
-	<div id="image-box">
-		<div id="flag-box">
-			<img id="flag-img" ng-src="http://www.geonames.org/flags/x/{{flag}}.gif" />
-		</div>
-
-		<div id="map-box">
-			<img id="map-img" ng-src="http://www.geonames.org/img/country/250/{{map}}.png" />
-		</div>
-	</div>
 	<div class="navigations text-center">
-		<a href='/' class='btn btn-sm btn-info' role='button'>Home</button>
+		<a href='/' class='btn btn-sm btn-info' role='button'>Home</a>
 		<a href='/countries' class='btn btn-sm btn-warning' role='button'>Browse Countries</a>
 	</div>
+</div>
