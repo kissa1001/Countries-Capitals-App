@@ -108,7 +108,11 @@ body table {
     width: 0;
     height: 0;
 }
-
+#table-search {
+    margin-top: .2em;
+    margin-left: .5em;
+    font-weight: 400;
+}
 .animate-enter.animate-enter-active,
 .animate-leave {
     opacity: 1;
