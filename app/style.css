@@ -3,20 +3,18 @@ body, html {
   padding:0;
   position:relative;
   height:100%;
-background: #fd746c; /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #fd746c , #ff9068); /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to left, #fd746c , #ff9068); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */      
+background: #1CD8D2; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #1CD8D2 , #93EDC7); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #1CD8D2 , #93EDC7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 body h1{
-  color:#fff;
+  color:#265857;
 }
 body h2{
-  color:#fff;
+  color:#265857;
   margin-bottom: 1.5em;
 }
-.country-name{
-  color:#6D14FF;
-}
+
 body table {
   position: relative;
   width: 100%;
@@ -26,19 +24,23 @@ body table {
   margin-bottom: -.5em;
 }
 .table-striped > tbody > tr:nth-of-type(odd) {
-    background-color: #F2F2F2 !important;
+    background-color: #15A5A0 !important;
+    color:#FFDFB1;
 }
 
 .table-striped > tbody > tr:nth-of-type(even) {
-    background-color: #f9f9f9 !important;
+    background-color: #265857 !important;
+    color:#FFDFB1;
 }
 
 .table-hover > tbody > tr:hover {
-    background-color: #eee !important;
+    background-color: #FFDFB1 !important;
+    color:#265857;
+    cursor:pointer;
 }
 #neighbors-list {
     display: inline-block;
-    color:#A14BFF;
+    color:#0B5856;
 }
 #flag-img{
   width:350px;
