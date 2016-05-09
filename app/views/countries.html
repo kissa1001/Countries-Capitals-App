@@ -4,7 +4,7 @@
 	<div class="table-responsive">
 		<table class='table table-striped table-hover'>
 		<label id="table-search">Search by Country Name: <input ng-model="search.countryName"></label>
-			<thead style="background:#fff">
+			<thead style="background:#FFDFB1;color:#265857">
 				<th>Name</th>
 				<th>Country Code</th>
 				<th>Capital</th>
@@ -12,9 +12,9 @@
 				<th>Population</th>
 				<th>Continent</th>
 			</thead>
-			<tbody style="color:#000;">
+			<tbody>
 				<tr ng-repeat="country in countries | orderBy:predicate:reverse | filter:search:startsWith" ng-click="showDetail(country)">
-					<td><a class="country-name" ng-href="/countries/{{country.countryCode}}">{{country.countryName}}</a></td>
+					<td>{{country.countryName}}</td>
 					<td>{{country.countryCode}}</td>
 					<td>{{country.capital}}</td>
 					<td>{{(country.areaInSqKm) | number}}</td>
